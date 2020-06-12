@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: gov.cdc.ncezid
+---
+testFramework: junit
+sourceLanguage: java

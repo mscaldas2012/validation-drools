@@ -1,0 +1,42 @@
+micronaut:
+  application:
+    name: validation-drools
+  server:
+    max-request-size: '200MB'
+    multipart:
+      max-file-size: '200MB'
+  router:
+    static-resources:
+      swagger:
+        paths: classpath:META-INF/swagger
+        mapping: ${application.api.swagger.path}/**
+
+jackson:
+  date-format: M/d/yyyy
+  serialization:
+      writeDatesAsTimestamps: false
+
+minio:
+  endpoint: ${MINIO_ENDPOINT}
+  accesskey: ${MINIO_ACCESS_KEY}
+  secretkey: ${MINIO_SECRET_KEY}
+
+
+cdc-logging:
+  enabled: true
+  url: ${CDC_LOGGING_URL}
+  env: LOCAL
+
+s2s-auth-config:
+  token: ${S2S_AUTH_TOKEN}
+
+application:
+  api:
+    swagger:
+      path: /swagger
+      version: 3.23.11
+      layout: StandaloneLayout
+      deepLinking: true
+      urls:
+        - name: validation
+          url: /swagger/validation-api-1.0.yml
