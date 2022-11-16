@@ -10,7 +10,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <exec.mainClass>gov.cdc.ncezid.Application</exec.mainClass>
     <drools.version>7.36.1.Final</drools.version>
-    <jackson.version>2.11.0</jackson.version>
+    <jackson.version>2.12.7.1</jackson.version>
   </properties>
   <repositories>
     <repository>
